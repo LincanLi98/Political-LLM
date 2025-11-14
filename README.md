@@ -1,4 +1,4 @@
-markdown# Political-LLM Experiments
+# Political-LLM Experiments
 
 This repository contains three experimental setups to study how LLMs simulate voting behavior based on demographic and political profiles from the 2016 ANES (American National Election Studies) dataset.
 
