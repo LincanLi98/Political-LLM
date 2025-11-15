@@ -127,6 +127,19 @@ python run.py --model gpt-4o-mini --no-llm-ideology
 # LLM-generated ideology experiment
 cd ../FPP_ANES_2016_gen
 python run.py --model gpt-4o-mini
+
+# --- MANIFESTO Experiments ---
+# Cross-national baseline (using ground-truth RILE ideology)
+cd ../../FPP_MANIFESTO_2025_base
+python run.py --model gpt-4o-mini
+
+# Cross-national, no ideology
+cd ../FPP_MANIFESTO_2025_NP
+python run.py --model gpt-4o-mini --no-llm-ideology
+
+# Cross-national, LLM-generated ideology (ManifestoBERTa + LLM)
+cd ../FPP_MANIFESTO_2025_gen
+python run.py --model gpt-4o-mini
 ```
 
 #### 3. Run with AWS Bedrock Models (Requires Rate Limiting)
@@ -136,6 +149,18 @@ python run.py --model meta.llama3-1-70b-instruct-v1:0 --delay 2.0
 
 # For FPP_ANES_2016_gen, use even longer delay (2 API calls per identity)
 cd FPP_ANES_2016_gen
+python run.py --model meta.llama3-1-70b-instruct-v1:0 --delay 3.0
+
+# Cross-national baseline (Manifesto 2025, ground-truth ideology)
+cd ../../FPP_MANIFESTO_2025_base
+python run.py --model meta.llama3-1-70b-instruct-v1:0 --delay 2.0
+
+# Cross-national, no ideology
+cd ../FPP_MANIFESTO_2025_NP
+python run.py --model meta.llama3-1-70b-instruct-v1:0 --delay 2.0 --no-llm-ideology
+
+# Cross-national, LLM-generated ideology (ManifestoBERTa + LLM)
+cd ../FPP_MANIFESTO_2025_gen
 python run.py --model meta.llama3-1-70b-instruct-v1:0 --delay 3.0
 ```
 
