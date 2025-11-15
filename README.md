@@ -7,6 +7,9 @@ This repository contains three experimental setups to study how LLMs simulate vo
 ├── FPP_ANES_2016_base/     # Experiment using ANES original political ideology
 ├── FPP_ANES_2016_NP/       # Experiment WITHOUT political ideology
 └── FPP_ANES_2016_gen/      # Experiment using LLM-generated political ideology
+├── FPP_MANIFESTO_2025_base/
+├── FPP_MANIFESTO_2025_NP/
+└── FPP_MANIFESTO_2025_gen/
 ```
 
 ## 🔬 Experiment Descriptions
