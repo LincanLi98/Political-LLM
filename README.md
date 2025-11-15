@@ -12,7 +12,7 @@ This repository contains three experimental setups to study how LLMs simulate vo
 ├── FPP_MANIFESTO_2025_NP/      # Cross-national experiment WITHOUT ideological features (neutral textual inputs only)
 ├── FPP_MANIFESTO_2025_gen/     # Cross-national experiment using LLM-generated ideology embeddings derived from manifesto texts
 │
-└── Evaluation_Tools/           #Evaluation toolkit providing standardized metrics, fairness analysis, uncertainty quantification, and transparency checklists
+└── Evaluation_Tools/           #Toolkit for providing standardized metrics, fairness analysis, uncertainty quantification, and transparency checklists
 ```
 
 ## 🔬 Experiment Descriptions
