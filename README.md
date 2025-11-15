@@ -11,6 +11,7 @@ This repository contains three experimental setups to study how LLMs simulate vo
 ├── FPP_MANIFESTO_2025_base/    # Cross-national experiment using Manifesto dataset with original annotated ideological positions
 ├── FPP_MANIFESTO_2025_NP/      # Cross-national experiment WITHOUT ideological features (neutral textual inputs only)
 └── FPP_MANIFESTO_2025_gen/     # Cross-national experiment using LLM-generated ideology embeddings derived from manifesto texts
+└── Evaluation_Tools/           #
 ```
 
 ## 🔬 Experiment Descriptions
