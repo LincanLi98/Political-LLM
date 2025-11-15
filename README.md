@@ -303,3 +303,31 @@ python run.py --list
 - Main execution script
 - Processes all identities sequentially
 - Outputs voting statistics
+- 
+
+## 🧮 Evaluation and Analysis Tools
+
+#### `evaluation.py`
+
+- Provides a unified evaluation framework for all experiments.
+- Computes core metrics (accuracy, F1, calibration error, ideology correlation) across experimental runs.
+- Supports subgroup-level comparisons for fairness and robustness testing.
+
+#### `fairness_report.py`
+
+- Generates detailed subgroup fairness reports based on demographics (gender, age, education).
+- Calculates within-group accuracy and bias metrics to assess representation balance.
+- Outputs CSV and summary visualizations for inclusion in manuscript tables.
+
+#### `uncertainty_quantification.py`
+
+- Quantifies statistical uncertainty of simulation outcomes.
+- Implements bootstrap resampling to estimate 95% confidence intervals for metrics (vote ratio, ideology alignment).
+- Ensures transparency about simulation variability and reproducibility.
+
+#### `Inclusivity_and_Transparency_Checklist.html / .pdf`
+
+- Provides an auditable checklist for responsible deployment and reporting.
+- Covers fairness, inclusivity, transparency, and accountability criteria based on *Model Cards* and *Datasheets* standards.
+- Serves as a reproducibility and ethical compliance appendix for TMLR submission.
+- 
