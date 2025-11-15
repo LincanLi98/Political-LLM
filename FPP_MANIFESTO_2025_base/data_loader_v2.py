@@ -24,7 +24,7 @@ from datetime import datetime
 
 
 # ===== 配置区 =====
-API_KEY = "2447452c728106b588ef11cac94b37b9"
+API_KEY = "Your_API_Key"
 BASE_URL = "https://manifesto-project.wzb.eu/api/v1/texts_and_annotations"
 LOG_FILE = "manifesto_loader_errors.log"
 VERSION = "2024-1"  # corpus版本号
