@@ -185,25 +185,6 @@ python run.py --model gpt-4o-mini --no-llm-ideology
 python run.py --model gpt-4o-mini --no-candidate-info
 ```
 
-## 📊 Output Files
-
-After running experiments, the following files are generated:
-```
-responses/
-├── results.txt           # Complete AI responses for each identity
-├── prompt_history.txt    # All prompts sent to the model
-└── votes.txt            # Final voting statistics
-
-republican_supporter/
-└── identities.txt       # All identities that voted Republican
-
-democratic_supporter/
-└── identities.txt       # All identities that voted Democratic
-
-nopreference_supporter/
-└── identities.txt       # All identities with no preference
-```
-
 ## 🔧 Configuration
 
 ### Changing Models
