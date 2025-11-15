@@ -31,6 +31,59 @@ This repository contains three experimental setups to study how LLMs simulate vo
 - Tests whether LLM can infer political ideology from demographics
 - **Run command**: `python run.py --model <model_id>`
 
+
+### 4. FPP_MANIFESTO_2025_base (Cross-National Baseline)
+
+- Uses the **Manifesto Project (2025 edition)** dataset containing annotated party manifestos across multiple countries and election years.
+- Incorporates **original ideology annotations** provided by the Manifesto Corpus (RILE-based left–right positions).
+- Tests how well the Political-LLM framework generalizes from U.S.-specific (ANES) to **cross-national contexts** using real ideology labels.
+- Run command:
+  ```bash
+  cd FPP_MANIFESTO_2025_base
+  python run.py --model <model_id>
+  ```
+
+
+### 5. FPP_MANIFESTO_2025_NP (Cross-National, No Political Ideology)
+
+- Excludes all ideological information from manifesto texts.
+- Tests whether LLMs can predict **party positions and vote patterns** purely from policy language, without explicit left–right ideology cues.
+- Useful for analyzing the contribution of ideological content vs. factual policy descriptions in cross-country contexts.
+- Run command:
+  ```bash
+  cd FPP_MANIFESTO_2025_NP
+  python run.py --model <model_id> --no-llm-ideology
+  ```
+
+
+### 6. FPP_MANIFESTO_2025_gen (Cross-National, LLM-Generated Ideology)
+
+- Uses **ManifestoBERTa** (fine-tuned multilingual XLM-RoBERTa model) to extract 56 policy-topic distributions for each party manifesto.
+- Asks LLMs to infer ideological embeddings (“left”, “center”, “right”) based on these topic profiles — simulating **LLM-generated ideology** in a multilingual political space.
+- Makes 2 API calls per manifesto: (1) generate ideological embedding, (2) predict election or stance outcomes.
+- Evaluates whether LLMs can generalize ideological reasoning across **countries, languages, and election years**.
+- Run command:
+  ```bash
+  cd FPP_MANIFESTO_2025_gen
+  python run.py --model <model_id>
+  ```
+
+
+###  Summary Table
+
+| Experiment                  | Dataset                                | Ideology Source               | Description                              |
+| --------------------------- | -------------------------------------- | ----------------------------- | ---------------------------------------- |
+| FPP_ANES_2016_base          | ANES 2016 (U.S.)                       | Original ANES ideology labels | U.S. baseline with ground-truth ideology |
+| FPP_ANES_2016_NP            | ANES 2016 (U.S.)                       | None                          | Demographics only (no ideology)          |
+| FPP_ANES_2016_gen           | ANES 2016 (U.S.)                       | LLM-generated                 | LLM infers ideology from demographics    |
+| FPP_MANIFESTO_2025_base     | Manifesto Corpus 2025 (Cross-national) | Original RILE annotations     | Ground-truth ideology across countries   |
+| FPP_MANIFESTO_2025_NP       | Manifesto Corpus 2025                  | None                          | Cross-national text-only setup           |
+| FPP_MANIFESTO_2025_gen      | Manifesto Corpus 2025                  | LLM-generated                 | Cross-national LLM-generated ideology    |
+
+---
+
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
