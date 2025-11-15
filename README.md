@@ -59,7 +59,7 @@ This repository contains three experimental setups to study how LLMs simulate vo
 ### 6. FPP_MANIFESTO_2025_gen (Cross-National, LLM-Generated Ideology)
 
 - Uses **ManifestoBERTa** (fine-tuned multilingual XLM-RoBERTa model) to extract 56 policy-topic distributions for each party manifesto.
-- Asks LLMs to infer ideological embeddings (“left”, “center”, “right”) based on these topic profiles — simulating **LLM-generated ideology** in a multilingual political space.
+- Asks LLMs to infer ideological embeddings ("left", "center", "right") based on these topic profiles — simulating **LLM-generated ideology** in a multilingual political space.
 - Makes 2 API calls per manifesto: (1) generate ideological embedding, (2) predict election or stance outcomes.
 - Evaluates whether LLMs can generalize ideological reasoning across **countries, languages, and election years**.
 - Run command:
